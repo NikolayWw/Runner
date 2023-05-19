@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17f0c0b132cd334c9d00c631e1fe6fc, type: 3}
+  m_Name: HinderTileStaticData
+  m_EditorClassIdentifier: 
+  <StartTilesCount>k__BackingField: 5
+  <StartTileOffsetForward>k__BackingField: 10
+  <DistanceBetweenTiles>k__BackingField: 15
+  <LifeTimeAfterTriggered>k__BackingField: 5
+  <TileConfigs>k__BackingField:
+  - _inspectorName: Wall1
+    <GroupId>k__BackingField: 1
+    <Prefab>k__BackingField: {fileID: 7625776042422568644, guid: d1c38371097f47a449af175c3b58abcf, type: 3}
+  - _inspectorName: Wall2
+    <GroupId>k__BackingField: 2
+    <Prefab>k__BackingField: {fileID: 7625776042422568644, guid: 0ae4a6664645de44b9fbea9df3846243, type: 3}
+  - _inspectorName: Wall3
+    <GroupId>k__BackingField: 3
+    <Prefab>k__BackingField: {fileID: 7625776042422568644, guid: 9c17d9cff943c054aa19a90188ba9d12, type: 3}
+  - _inspectorName: Wall4
+    <GroupId>k__BackingField: 4
+    <Prefab>k__BackingField: {fileID: 7625776042422568644, guid: 9bc61a8947df2e84d9a786f5707e29b2, type: 3}

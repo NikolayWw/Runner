@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d42e3658073ba044859009b453506a8, type: 3}
+  m_Name: PlayerStaticData
+  m_EditorClassIdentifier: 
+  <DeadPushForce>k__BackingField: 40
+  <MoveX>k__BackingField: 4
+  <MoveForward>k__BackingField: 7
+  <CameraConfig>k__BackingField:
+    <ShakeCount>k__BackingField: 10
+    <ShakeSpeed>k__BackingField: 0.005

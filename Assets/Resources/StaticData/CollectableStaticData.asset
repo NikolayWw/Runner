@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e27182caf0f8e841923c21588a2dee8, type: 3}
+  m_Name: CollectableStaticData
+  m_EditorClassIdentifier: 
+  <Configs>k__BackingField:
+  - _inspectorName: Cube1
+    <Id>k__BackingField: 1
+    <PrefabGroup>k__BackingField: {fileID: 3075436758624536801, guid: 78af685e6b75fd84293efba10516f7dd, type: 3}
+    <PrefabCollectable>k__BackingField: {fileID: 674350461463604983, guid: 0971e4bd3e251ed4da5a34e878c4f02d, type: 3}
+  - _inspectorName: Cube2
+    <Id>k__BackingField: 2
+    <PrefabGroup>k__BackingField: {fileID: 3075436758624536801, guid: 10448dc33e95eaf44a1d124dbd47e5a6, type: 3}
+    <PrefabCollectable>k__BackingField: {fileID: 674350461463604983, guid: 0971e4bd3e251ed4da5a34e878c4f02d, type: 3}
+  - _inspectorName: Cube3
+    <Id>k__BackingField: 3
+    <PrefabGroup>k__BackingField: {fileID: 3075436758624536801, guid: ace61568fe25e00409424ffdabc8cad4, type: 3}
+    <PrefabCollectable>k__BackingField: {fileID: 674350461463604983, guid: 0971e4bd3e251ed4da5a34e878c4f02d, type: 3}
