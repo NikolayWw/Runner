@@ -42,7 +42,7 @@ namespace CodeBase.Tiles.TrackTiles
 
             while (true)
             {
-                for (int i = 0; i < 10_000; i++) //stack over flow
+                for (int i = 0; i < 10_000; i++) //stack overflow
                 {
                     if (_previousTile != null && _previousTile.EndZPosition() < _cameraTransform.position.z)
                     {
