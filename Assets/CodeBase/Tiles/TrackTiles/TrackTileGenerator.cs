@@ -15,7 +15,7 @@ namespace CodeBase.Tiles.TrackTiles
         private Transform _cameraTransform;
 
         private readonly List<TrackGround> _tiles = new();
-        private TrackGround _previousGround;
+        private TrackGround _previousTile;
 
         public void Construct(IStaticDataService dataService, IGameFactory gameFactory, Transform cameraTransform)
         {
@@ -26,28 +26,27 @@ namespace CodeBase.Tiles.TrackTiles
 
         private void Start()
         {
-            CreateFirstGround();
+            CreateFirstTile();
             StartCoroutine(CheckCameraPosition(RemoveFirstTile, CreateTile));
         }
 
-        private void CreateFirstGround()
+        private void CreateFirstTile()
         {
-            TrackGround ground = _gameFactory.CreateTrackGround(TrackTileId.Tile1, Vector3.back * 5);//start offset
+            TrackGround ground = _gameFactory.CreateTrackTile(TrackTileId.Tile1, Vector3.back * 5);//start offset
             Register(ground);
         }
 
-        private IEnumerator CheckCameraPosition(params Action[] playerTriggered)
+        private IEnumerator CheckCameraPosition(params Action[] onBehindCamera)
         {
             var wait = new WaitForSeconds(_dataService.TrackTileStaticData.CheckNewTileDelay);
-            const int stackOverFlow = 10_000;
 
             while (true)
             {
-                for (int i = 0; i < stackOverFlow; i++)
+                for (int i = 0; i < 10_000; i++) //stack over flow
                 {
-                    if (_previousGround != null && _previousGround.EndZPosition() < _cameraTransform.position.z)
+                    if (_previousTile != null && _previousTile.EndZPosition() < _cameraTransform.position.z)
                     {
-                        foreach (var action in playerTriggered)
+                        foreach (var action in onBehindCamera)
                         {
                             action?.Invoke();
                         }
@@ -62,14 +61,14 @@ namespace CodeBase.Tiles.TrackTiles
 
         private void CreateTile()
         {
-            TrackGround ground = _gameFactory.CreateTrackGround(TrackTileId.Tile1, Vector3.forward * _previousGround.EndZPosition());
+            TrackGround ground = _gameFactory.CreateTrackTile(TrackTileId.Tile1, Vector3.forward * _previousTile.EndZPosition());
             Register(ground);
         }
 
         private void Register(TrackGround ground)
         {
             _tiles.Add(ground);
-            _previousGround = ground;
+            _previousTile = ground;
         }
 
         private void RemoveFirstTile()

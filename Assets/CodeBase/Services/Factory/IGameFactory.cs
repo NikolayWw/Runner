@@ -18,7 +18,7 @@ namespace CodeBase.Services.Factory
 
         PlayerCollectedObject CreateCollectablePlayer(CollectableId id, Transform parent, Transform follow, float height);
 
-        TrackGround CreateTrackGround(TrackTileId id, Vector3 at);
+        TrackGround CreateTrackTile(TrackTileId id, Vector3 at);
 
         void SetMainCamera(UnityEngine.Camera mainCamera);
 

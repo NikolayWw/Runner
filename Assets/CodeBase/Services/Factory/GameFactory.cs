@@ -75,7 +75,7 @@ namespace CodeBase.Services.Factory
             return instance.GetComponentInChildren<PlayerCollectedObject>();
         }
 
-        public TrackGround CreateTrackGround(TrackTileId id, Vector3 at)
+        public TrackGround CreateTrackTile(TrackTileId id, Vector3 at)
         {
             TrackTileConfig config = Service<IStaticDataService>().ForTrackTile(id);
             GameObject instantiate = Object.Instantiate(config.Prefab, at, Quaternion.identity);
